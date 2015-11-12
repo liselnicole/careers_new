@@ -1,32 +1,9 @@
-#careers_mosiac,
-.col-md-12,
-.col-md-7,
-.col-md-5 {
-  padding: 0;
-  overflow: hidden;
-  color: #fff;
-}
-#careers_mosiac .link,
-.col-md-12 .link,
-.col-md-7 .link,
-.col-md-5 .link {
-  position: absolute;
-  bottom: 20px;
-  color: #fff;
-  font-size: 1.75rem;
-}
-#careers_mosiac .link a,
-.col-md-12 .link a,
-.col-md-7 .link a,
-.col-md-5 .link a {
+.link a {
   color: #fff;
   transition: all 0.2s ease-in-out;
   text-decoration: none;
 }
-#careers_mosiac .link a:before,
-.col-md-12 .link a:before,
-.col-md-7 .link a:before,
-.col-md-5 .link a:before {
+.link a:before {
   content: "";
   position: absolute;
   width: 100%;
@@ -40,13 +17,43 @@
   -webkit-transition: all 0.35s ease-in-out 0s;
   transition: all 0.35s ease-in-out 0s;
 }
-#careers_mosiac .link a.underline:before,
-.col-md-12 .link a.underline:before,
-.col-md-7 .link a.underline:before,
-.col-md-5 .link a.underline:before {
+.link a.underline:before {
   visibility: visible;
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
+}
+.overlay {
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+#careers_mosaic {
+  color: #fff;
+}
+#careers_mosaic .col-md-12,
+#careers_mosaic .col-md-7,
+#careers_mosaic .col-md-5 {
+  padding: 0;
+  overflow: hidden;
+}
+#careers_mosaic .visible {
+  overflow: visible;
+}
+#careers_mosiac .link,
+.col-md-12 .link,
+.col-md-7 .link,
+.col-md-5 .link {
+  position: absolute;
+  bottom: 20px;
+  color: #fff;
+  font-size: 1.75rem;
 }
 #careers_mosiac .subtitle,
 .col-md-12 .subtitle,
@@ -73,21 +80,6 @@
 .col-md-5 img.darken {
   opacity: .75;
 }
-#careers_mosiac .overlay,
-.col-md-12 .overlay,
-.col-md-7 .overlay,
-.col-md-5 .overlay {
-  height: 100%;
-  left: 0px;
-  top: 0px;
-  position: absolute;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 100%;
-  cursor: pointer;
-  transition: all 0.5s ease-in-out;
-}
 #careers_mosiac figure,
 .col-md-12 figure,
 .col-md-7 figure,
@@ -102,6 +94,18 @@
 .col-md-5 figure.move-right {
   -webkit-transform: translate(10px, 0);
   transform: translate(10px, 0);
+}
+.quote::before {
+  width: 51px;
+}
+.quote {
+  background: url(../img/quotes.png) no-repeat 20% 30%;
+  font-size: 2rem;
+  overflow: visible;
+}
+.quote span {
+  display: block;
+  float: right;
 }
 .animated.duration-quarter {
   -webkit-animation-duration: .25s;
@@ -274,25 +278,24 @@
 .why_simplot {
   background: #00b0ca;
 }
+.why_simplot figure {
+  -webkit-transform: translate(0, 20px);
+  transform: translate(0, 20px);
+  overflow: visible;
+}
 .why_simplot figure.move {
-  -webkit-transform: translate(0, 10px);
-  transform: translate(0, 10px);
+  -webkit-transform: translate(0, 30px);
+  transform: translate(0, 30px);
 }
 .why_simplot .link {
   right: 38%;
 }
-.why_simplot .quote::before {
-  width: 51px;
-}
 .why_simplot .quote {
-  background: url(../img/quotes.png) no-repeat 20% 30%;
-  padding: 5% 0 0 20%;
-  font-size: 2rem;
-  overflow: visible;
+  padding: 5% 0 0 25%;
 }
-.why_simplot .quote span {
+.why_simplot .quote em {
   display: block;
-  float: right;
+  padding-left: 51px;
 }
 .apply_now {
   background: #ebb700;
@@ -368,4 +371,246 @@
 }
 .contact_us .link {
   right: 10%;
+}
+/* WHY SIMPLOT */
+.carousel .item {
+  padding: 15px 15%;
+  background: rgba(152, 143, 134, 0.5);
+}
+.carousel .item img {
+  margin: 0 auto;
+  border: 2px solid #fff;
+}
+.carousel .item h3 {
+  color: #fff;
+  margin-top: 20px;
+  font-size: 1.5em;
+  padding-left: 71px;
+}
+.carousel .item p {
+  margin-top: 15px;
+  margin-left: 5%;
+  color: #675C53;
+}
+.carousel .item p .intro {
+  font-size: 1.2em;
+  font-weight: 900;
+}
+.carousel .item .quote {
+  background-position: 0 0;
+  margin-left: 5%;
+  font-style: italic;
+}
+.carousel .carousel-indicators {
+  bottom: 0;
+}
+.section {
+  margin-top: 50px;
+}
+.why_simplot_title h1 span {
+  text-transform: none;
+  font-size: .75em;
+  font-weight: 100;
+}
+.numbers {
+  text-align: center;
+}
+.numbers span.number {
+  display: block;
+  margin: 0 auto;
+  font-weight: 900;
+  margin-top: -50px;
+  font-size: 150px;
+  color: #EBB700;
+}
+.numbers label {
+  margin-top: -30px;
+  display: block;
+  font-size: 1.5em;
+}
+.reward {
+  padding: 10px auto;
+}
+.reward img {
+  max-width: 25%;
+  padding-right: 7%;
+}
+.giving_back {
+  background-color: #ebebeb;
+}
+.giving_back h3 {
+  margin-top: 30px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.giving_back p {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.giving_back img {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.grid {
+  color: #fff;
+  margin-left: -15px;
+  width: 103.5%;
+}
+.grid .col-md-6,
+.grid .col-sm-6 {
+  padding: 0;
+}
+.grid figure {
+  position: relative;
+  float: left;
+  overflow: hidden;
+  margin: 0 1%;
+  min-height: 334px;
+  width: 100%;
+  background: #BD4F19;
+  text-align: center;
+  cursor: pointer;
+}
+.grid figure img {
+  position: relative;
+  display: block;
+  opacity: 0.7;
+}
+.grid figure figcaption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 2em;
+  color: #fff;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.grid figure figcaption::before,
+.grid figure figcaption::after {
+  pointer-events: none;
+}
+/*---------------*/
+/***** Sadie *****/
+/*---------------*/
+figure.effect-sadie figcaption::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: -webkit-linear-gradient(top, rgba(103, 92, 83, 0) 0%, rgba(103, 92, 83, 0.8) 75%);
+  background: linear-gradient(to bottom, rgba(103, 92, 83, 0) 0%, rgba(103, 92, 83, 0.8) 75%);
+  content: '';
+  opacity: 0;
+  -webkit-transform: translate3d(0, 50%, 0);
+  transform: translate3d(0, 50%, 0);
+}
+figure.effect-sadie h2 {
+  text-transform: uppercase;
+  text-shadow: 1px 1px 10px rgba(103, 92, 83, 0.66);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  color: #fff;
+  font-size: 1.5em;
+  -webkit-transition: -webkit-transform 0.35s, color 0.35s;
+  transition: transform 0.35s, color 0.35s;
+  -webkit-transform: translate3d(0, -50%, 0);
+  transform: translate3d(0, -50%, 0);
+}
+figure.effect-sadie figcaption::before,
+figure.effect-sadie p {
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+}
+figure.effect-sadie figcaption p {
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 5em;
+  width: 100%;
+  opacity: 0;
+  font-size: .8em;
+  -webkit-transform: translate3d(0, 10px, 0);
+  transform: translate3d(0, 10px, 0);
+}
+figure.effect-sadie:hover h2 {
+  color: #fff;
+  -webkit-transform: translate3d(0, -50%, 0) translate3d(0, -40px, 0);
+  transform: translate3d(0, -50%, 0) translate3d(0, -40px, 0);
+}
+figure.effect-sadie:hover figcaption::before,
+figure.effect-sadie:hover p {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+.good_fit {
+  background: #BD4F19;
+}
+.good_fit figure {
+  text-align: left;
+  padding: 15%;
+  -webkit-transform: translate(0, 20%);
+  transform: translate(0, 20%);
+}
+.good_fit figure .link a {
+  width: auto;
+  height: auto;
+  position: relative;
+  opacity: 1;
+  font-size: inherit;
+  background: none;
+  text-indent: 0;
+  z-index: auto;
+  font-size: 3em;
+}
+.good_fit .subtitle {
+  font-size: 1.5em;
+  display: block;
+}
+.good_fit h1 {
+  font-size: 2.5em;
+}
+.good_fit .overlay {
+  z-index: 1000;
+}
+.tabs_custom .nav li:nth-of-type(1).active a {
+  background: #ebb700;
+}
+.tabs_custom .nav li:nth-of-type(2).active a {
+  background: #00b0ca;
+}
+.tabs_custom .nav li:nth-of-type(3).active a {
+  background: #bd4f19;
+}
+.tabs_custom .nav li:nth-of-type(4).active a {
+  background: #69be28;
+}
+.tabs_custom .nav li {
+  width: 25%;
+  text-align: center;
+}
+.tabs_custom .nav li a {
+  text-decoration: none;
+  font-weight: 900;
+}
+.tabs_custom .tab-pane {
+  padding: 15px;
+}
+.tabs_custom .tab-pane#ab {
+  background: #ebb700;
+}
+.tabs_custom .tab-pane#fg {
+  background: #00b0ca;
+}
+.tabs_custom .tab-pane#ll {
+  background: #bd4f19;
+}
+.tabs_custom .tab-pane#corp {
+  background: #69be28;
 }
