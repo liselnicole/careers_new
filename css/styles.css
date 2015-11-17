@@ -1,4 +1,22 @@
+html,
+body {
+  height: 100%;
+}
+.home.theWrapper {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e5e5e5+0,ffffff+100 */
+  background: #e5e5e5 url(../img/doublefade_leaf-pattern-gray-3.png) no-repeat;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #e5e5e5 0%, #ffffff 100%) url(../img/doublefade_leaf-pattern-gray-3.png) no-repeat;
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #e5e5e5 0%, #ffffff 100%) url(../img/doublefade_leaf-pattern-gray-3.png) no-repeat;
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #e5e5e5 0%, #ffffff 100%) url(../img/doublefade_leaf-pattern-gray-3.png) no-repeat;
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e5e5e5', endColorstr='#ffffff', GradientType=0) url(../img/doublefade_leaf-pattern-gray-3.png) no-repeat;
+  /* IE6-9 */
+}
 .link a {
+  font-size: 2rem;
   color: #fff;
   transition: all 0.2s ease-in-out;
   text-decoration: none;
@@ -22,6 +40,11 @@
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
 }
+.link a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
 .overlay {
   height: 100%;
   left: 0px;
@@ -34,7 +57,98 @@
   cursor: pointer;
   transition: all 0.5s ease-in-out;
 }
+.overlay > a.overlay-link {
+  z-index: 1000;
+  text-indent: 200%;
+  white-space: nowrap;
+  font-size: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.overlay > a.overlay-link:active {
+  background: #fff;
+}
+#main-nav {
+  background: transparent;
+  border: none;
+  margin-bottom: 20px;
+  margin-top: 30px;
+  margin-left: 5%;
+  margin-right: 4%;
+}
+#main-nav .navbar-brand {
+  padding: 0;
+}
+#main-nav .navbar-brand img {
+  margin-top: -15px;
+}
+#main-nav .navbar-nav {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+#main-nav .navbar-nav li a {
+  color: #675C53;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 0;
+  margin: 15px 15px 0 15px;
+  text-decoration: none;
+  transition: all 0.5s ease-in-out;
+}
+#main-nav .navbar-nav li a:hover {
+  color: #988F86;
+}
+#main-nav .navbar-nav li a:before {
+  background-color: #988F86;
+}
+#main-nav .navbar-nav li.active > a {
+  background: none;
+}
+#main-nav .navbar-nav li.active > a:before {
+  background-color: #675C53;
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+#main-nav-sub {
+  margin-bottom: 0;
+  height: 75px;
+  transition: all 0.35s ease-in-out;
+}
+#main-nav-sub .navbar-brand {
+  padding: 0;
+}
+#main-nav-sub .navbar-brand img {
+  margin-top: 5px;
+  margin-left: 15px;
+  height: 65px;
+  transition: all 0.35s ease-in-out;
+}
+#main-nav-sub ul {
+  margin-top: 25px;
+  transition: all 0.35s ease-in-out;
+}
+#main-nav-sub li a {
+  text-decoration: none;
+}
+#main-nav-sub.shrink {
+  height: 50px;
+}
+#main-nav-sub.shrink img {
+  margin-top: 2px;
+  height: 45px;
+}
+#main-nav-sub.shrink ul {
+  margin-top: 0;
+}
 #careers_mosaic {
+  margin-left: 5%;
+  margin-right: 3%;
   color: #fff;
 }
 #careers_mosaic .col-md-12,
@@ -49,7 +163,8 @@
 #careers_mosiac .link,
 .col-md-12 .link,
 .col-md-7 .link,
-.col-md-5 .link {
+.col-md-5 .link,
+.col-md-4 .link {
   position: absolute;
   bottom: 20px;
   color: #fff;
@@ -58,32 +173,37 @@
 #careers_mosiac .subtitle,
 .col-md-12 .subtitle,
 .col-md-7 .subtitle,
-.col-md-5 .subtitle {
+.col-md-5 .subtitle,
+.col-md-4 .subtitle {
   font-size: 1.5em;
   display: block;
 }
 #careers_mosiac h1,
 .col-md-12 h1,
 .col-md-7 h1,
-.col-md-5 h1 {
+.col-md-5 h1,
+.col-md-4 h1 {
   font-size: 4rem;
 }
 #careers_mosiac img,
 .col-md-12 img,
 .col-md-7 img,
-.col-md-5 img {
+.col-md-5 img,
+.col-md-4 img {
   transition: all 0.5s ease-in-out;
 }
 #careers_mosiac img.darken,
 .col-md-12 img.darken,
 .col-md-7 img.darken,
-.col-md-5 img.darken {
+.col-md-5 img.darken,
+.col-md-4 img.darken {
   opacity: .75;
 }
 #careers_mosiac figure,
 .col-md-12 figure,
 .col-md-7 figure,
-.col-md-5 figure {
+.col-md-5 figure,
+.col-md-4 figure {
   overflow: visible;
   -webkit-transition: all 0.35s ease-in-out;
   transition: all 0.35s ease-in-out;
@@ -91,7 +211,8 @@
 #careers_mosiac figure.move-right,
 .col-md-12 figure.move-right,
 .col-md-7 figure.move-right,
-.col-md-5 figure.move-right {
+.col-md-5 figure.move-right,
+.col-md-4 figure.move-right {
   -webkit-transform: translate(10px, 0);
   transform: translate(10px, 0);
 }
@@ -99,11 +220,13 @@
   width: 51px;
 }
 .quote {
-  background: url(../img/quotes.png) no-repeat 20% 30%;
+  background: url(../img/quotes.png) no-repeat 20% 60%;
   font-size: 2rem;
   overflow: visible;
 }
 .quote span {
+  font-size: 1.75rem;
+  margin-top: 10px;
   display: block;
   float: right;
 }
@@ -220,8 +343,9 @@
   animation-delay: 3s;
 }
 .what_we_do {
-  height: 486px;
-  background: url('../img/road.jpg') no-repeat;
+  height: 665px;
+  width: 40%;
+  background: url('../img/road_2.jpg') no-repeat;
 }
 .what_we_do .overlay {
   padding: 15% 5% 3%;
@@ -243,18 +367,13 @@
 .what_we_do .overlay:hover figure h1:nth-of-type(3) {
   color: #69BE28;
 }
-.what_we_do .overlay:hover .link a:before {
-  visibility: visible;
-  -webkit-transform: scaleX(1);
-  transform: scaleX(1);
-}
 .what_we_do .overlay figure {
-  margin: 25% 10% 3%;
+  margin: 20% 10% 3%;
 }
 .what_we_do .overlay figure h1 {
   -webkit-transition: all 0.35s ease-in-out;
   transition: all 0.35s ease-in-out;
-  font-size: 4.5rem;
+  font-size: 6rem;
   margin: 10px 0;
 }
 .what_we_do .overlay figure h1:nth-of-type(1) {
@@ -271,6 +390,9 @@
   -webkit-transition-delay: .3s;
   /* Safari */
   transition-delay: .3s;
+}
+.what_we_do .overlay figure .subtitle {
+  font-size: 2.5rem;
 }
 .what_we_do .link {
   right: 10%;
@@ -291,7 +413,8 @@
   right: 38%;
 }
 .why_simplot .quote {
-  padding: 5% 0 0 25%;
+  font-size: 2.5rem;
+  padding: 10% 0 0 23%;
 }
 .why_simplot .quote em {
   display: block;
@@ -305,31 +428,39 @@
   transform: translate(10px, 0);
 }
 .apply_now h1 {
+  font-size: 6rem;
   margin: 10% 0 10px;
 }
 .apply_now .subtitle {
-  max-width: 250px;
+  font-size: 2.5rem;
+  max-width: 300px;
 }
 .apply_now .link {
   right: 50px;
 }
 .student_center {
+  width: 32%;
   padding: 3% 5%;
   background: #bd4f19;
-  height: 243px;
+  height: 300px;
 }
 .student_center figure.move {
   -webkit-transform: translate(0, 10px);
   transform: translate(0, 10px);
 }
 .student_center h1 {
+  font-size: 6rem;
   margin: 10px 0;
+}
+.student_center .subtitle {
+  font-size: 2.5rem;
 }
 .student_center .link {
   right: 10%;
 }
 .video {
-  height: 243px;
+  width: 32%;
+  height: 300px;
   background: url(../img/video_capture.jpg) no-repeat;
 }
 .video .overlay {
@@ -358,7 +489,7 @@
 }
 .contact_us {
   padding: 3% 5%;
-  height: 243px;
+  height: 300px;
   background: #69be28;
 }
 .contact_us figure.move {
@@ -366,15 +497,23 @@
   transform: translate(0, 10px);
 }
 .contact_us h1 {
-  font-size: 2.5em;
+  font-size: 5rem;
   margin: 10px 0;
 }
 .contact_us .link {
   right: 10%;
 }
+.contact_us .subtitle {
+  font-size: 2.5rem;
+}
 /* WHY SIMPLOT */
+.carousel .item,
+.carousel .active,
+.carousel .carousel-inner {
+  height: 100%;
+}
 .carousel .item {
-  padding: 15px 15%;
+  padding: 100px 15%;
   background: rgba(152, 143, 134, 0.5);
 }
 .carousel .item img {
@@ -413,7 +552,9 @@
   font-weight: 100;
 }
 .numbers {
+  border-left: 2px solid #C3C8C8;
   text-align: center;
+  min-height: 250px;
 }
 .numbers span.number {
   display: block;
@@ -428,12 +569,29 @@
   display: block;
   font-size: 1.5em;
 }
+.numbers:nth-of-type(1) {
+  border: none;
+}
+.numbers.student span.number {
+  font-size: 100px;
+}
 .reward {
-  padding: 10px auto;
+  padding: 15px 5%;
+}
+.reward:nth-of-type(1),
+.reward:nth-of-type(3) {
+  border-right: 2px solid #C3C8C8;
+}
+.reward:nth-of-type(3),
+.reward:nth-of-type(4) {
+  border-top: 2px solid #C3C8C8;
 }
 .reward img {
   max-width: 25%;
-  padding-right: 7%;
+}
+.reward ul {
+  margin-top: 20px;
+  margin-left: 25%;
 }
 .giving_back {
   background-color: #ebebeb;
@@ -579,38 +737,91 @@ figure.effect-sadie:hover p {
 .good_fit .overlay {
   z-index: 1000;
 }
-.tabs_custom .nav li:nth-of-type(1).active a {
-  background: #ebb700;
+.biz-group {
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
-.tabs_custom .nav li:nth-of-type(2).active a {
-  background: #00b0ca;
+.biz-group:nth-of-type(1) {
+  margin-top: 0;
+  padding-top: 0;
 }
-.tabs_custom .nav li:nth-of-type(3).active a {
-  background: #bd4f19;
+.biz-group h4 {
+  margin-top: 0;
 }
-.tabs_custom .nav li:nth-of-type(4).active a {
-  background: #69be28;
+.biz-group .link {
+  right: 15px;
+  bottom: -25px;
 }
-.tabs_custom .nav li {
-  width: 25%;
+.biz-group .link a {
+  font-size: 1.5rem;
+  color: #675C53;
+}
+.biz-group .link a:before {
+  background: #675C53;
+}
+.img-container {
+  padding-bottom: 10px;
+}
+.wwd {
+  padding: 50px 0;
+  color: #fff;
+}
+.wwd h1 {
+  margin: 0;
+  font-size: 3em;
+}
+.wwd.orange {
+  background: #b14b03 url(../img/doublefade_leaf-pattern-orange.png) no-repeat 100%;
+}
+.sub-page {
+  margin-top: 75px;
+}
+.sub-page h2 {
+  font-size: 2em;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+section.bg-gray {
+  background: #e8ebec;
+}
+footer {
+  margin-top: 20px;
+  font-size: .75em;
   text-align: center;
 }
-.tabs_custom .nav li a {
+footer .navbar-default {
+  background: none;
+  border: none;
+}
+footer .navbar-default .navbar-nav {
+  float: none;
+  transform: translateX(20%);
+}
+footer .navbar-default .navbar-nav li a {
   text-decoration: none;
-  font-weight: 900;
 }
-.tabs_custom .tab-pane {
-  padding: 15px;
+/* You can change the height of the carousel by changing the height in the class below. It is set to 50% by default, but can be any height! */
+.carousel {
+  height: 50%;
 }
-.tabs_custom .tab-pane#ab {
-  background: #ebb700;
+#total-rewards img {
+  max-height: 150px;
+  display: block;
+  margin: 10px auto;
 }
-.tabs_custom .tab-pane#fg {
-  background: #00b0ca;
+#total-rewards .col-md-3 {
+  text-align: center;
 }
-.tabs_custom .tab-pane#ll {
-  background: #bd4f19;
+#total-rewards .col-md-3 ul {
+  padding: 0;
 }
-.tabs_custom .tab-pane#corp {
-  background: #69be28;
+#total-rewards .col-md-3 ul li {
+  list-style: none;
+}
+footer {
+  margin: 50px 0;
 }

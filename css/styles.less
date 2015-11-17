@@ -1,4 +1,17 @@
-    .link a {
+html,
+body {
+    height: 100%;
+}
+.home.theWrapper {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e5e5e5+0,ffffff+100 */
+    background: #e5e5e5 url(../img/doublefade_leaf-pattern-gray-3.png) no-repeat; /* Old browsers */
+    background: -moz-linear-gradient(top,  #e5e5e5 0%, #ffffff 100%) url(../img/doublefade_leaf-pattern-gray-3.png) no-repeat; /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #e5e5e5 0%,#ffffff 100%) url(../img/doublefade_leaf-pattern-gray-3.png) no-repeat; /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #e5e5e5 0%,#ffffff 100%) url(../img/doublefade_leaf-pattern-gray-3.png) no-repeat; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5e5e5', endColorstr='#ffffff',GradientType=0 ) url(../img/doublefade_leaf-pattern-gray-3.png) no-repeat; /* IE6-9 */
+}
+.link a {
+    font-size: 2rem; 
         color: #fff; 
         transition: all .2s ease-in-out;
         text-decoration:none;
@@ -21,6 +34,11 @@
           -webkit-transform: scaleX(1);
           transform: scaleX(1);
         }
+        &:hover:before {
+              visibility: visible;
+              -webkit-transform: scaleX(1);
+              transform: scaleX(1);
+            }
     }
     .link a:hover {
         //color: #E5E8E8;
@@ -36,8 +54,110 @@
         width: 100%;
         cursor: pointer;
         transition: all .5s ease-in-out;
+        & > a.overlay-link {
+            z-index: 1000;
+            text-indent: 200%;
+            white-space: nowrap;
+            font-size: 0;
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            &:active {
+                background: #fff; 
+            }
+        }
     }
+#main-nav {
+    
+    background: transparent; 
+    border: none;
+    margin-bottom: 20px; 
+    margin-top: 30px; 
+    margin-left: 5%;
+    margin-right: 4%; 
+    .navbar-brand {
+        padding: 0; 
+        img {
+            margin-top: -15px; 
+        }
+    }
+    .navbar-nav {
+        position: absolute;
+        right: 0; 
+        bottom: 0; 
+        li {
+            a {
+                color: #675C53;
+                font-size: 1.5rem; 
+                font-weight: 600; 
+                padding: 0;
+                margin: 15px 15px 0 15px; 
+                text-decoration: none; 
+                transition: all .5s ease-in-out;
+                &:hover {
+                    color: #988F86; 
+                }
+                &:before {
+                    background-color: #988F86;
+                }
+            }
+            &.active {
+                > a {
+                     background: none; 
+                     //border-bottom: 2px solid red; 
+                    &:before {
+                          background-color: #675C53;
+                            visibility: visible;
+                          -webkit-transform: scaleX(1);
+                          transform: scaleX(1);
+                    }
+                }
+            }
+            
+        }
+    }
+}
+#main-nav-sub {
+    margin-bottom: 0; 
+    height: 75px; 
+    transition: all 0.35s ease-in-out;
+    .navbar-brand {
+            padding:0;
+            img {
+                margin-top: 5px; 
+                margin-left: 15px; 
+                height: 65px;
+                transition: all 0.35s ease-in-out;
+            }
+    }
+    ul {
+        margin-top: 25px; 
+        transition: all 0.35s ease-in-out;
+    }
+    
+    li {
+        a {
+            text-decoration: none; 
+        }
+    }
+    &.shrink {
+        height: 50px; 
+            img {
+                margin-top: 2px; 
+                height: 45px; 
+            }
+        ul {
+            margin-top: 0; 
+        }
+    }
+}
+
 #careers_mosaic {
+    margin-left: 5%;
+    margin-right: 3%; 
     color: #fff; 
     .col-md-12, .col-md-7, .col-md-5 {
        padding:0;   
@@ -48,7 +168,7 @@
     }
 }
 
-#careers_mosiac, .col-md-12, .col-md-7, .col-md-5 {
+#careers_mosiac, .col-md-12, .col-md-7, .col-md-5, .col-md-4 {
     .link {
     position: absolute; 
     bottom: 20px; 
@@ -85,10 +205,12 @@
     width: 51px; 
 }
 .quote {
-    background: url(../img/quotes.png) no-repeat 20% 30%;
+    background: url(../img/quotes.png) no-repeat 20% 60%;
     font-size: 2rem; 
     overflow: visible;
     span {
+        font-size: 1.75rem; 
+        margin-top: 10px; 
         display: block; 
         float:right;
     }
@@ -208,8 +330,9 @@
     }  
 }
 .what_we_do {
-    height: 486px;
-    background: url('../img/road.jpg') no-repeat;
+    height: 665px;
+    width: 40%; 
+    background: url('../img/road_2.jpg') no-repeat;
     .overlay {
         padding: 15% 5% 3%; 
         //opacity: .75;
@@ -230,18 +353,13 @@
                     color: #69BE28;
                 }
             }
-            .link a:before {
-              visibility: visible;
-              -webkit-transform: scaleX(1);
-              transform: scaleX(1);
-            }
         }
         figure {
-              margin: 25% 10% 3%; 
+              margin: 20% 10% 3%; 
             h1 {
                 -webkit-transition: all 0.35s ease-in-out;
 	            transition: all 0.35s ease-in-out;
-                font-size: 4.5rem;
+                font-size: 6rem;
                 margin: 10px 0; 
                 &:nth-of-type(1) {
                      -webkit-transition-delay: .1s; /* Safari */
@@ -255,6 +373,9 @@
                      -webkit-transition-delay: .3s; /* Safari */
                      transition-delay: .3s;
                 }
+            }
+            .subtitle {
+                font-size: 2.5rem; 
             }
         }
        
@@ -279,7 +400,8 @@
         right: 38%; 
     }   
     .quote {
-         padding: 5% 0 0 25%; 
+        font-size: 2.5rem; 
+         padding: 10% 0 0 23%; 
         em {
             display: block;
             padding-left: 51px; 
@@ -294,32 +416,41 @@
         transform: translate(10px,0);
     }
      h1 {
+        font-size: 6rem; 
         margin: 10% 0 10px; 
     }
     .subtitle {
-        max-width: 250px; 
+        font-size: 2.5rem; 
+        max-width: 300px; 
     }
     .link {
+        
         right: 50px; 
     }
 }
 .student_center {
+    width: 32%; 
     padding: 3% 5%; 
     background: #bd4f19;
-    height:243px;
+    height:300px;
     figure.move {
         -webkit-transform: translate(0,10px);
         transform: translate(0,10px);
     }
     h1 {
+        font-size: 6rem; 
         margin: 10px 0; 
+    }
+    .subtitle {
+        font-size: 2.5rem; 
     }
     .link {
         right: 10%; 
     }
 }
 .video {
-    height: 243px; 
+    width: 32%; 
+    height: 300px; 
     background: url(../img/video_capture.jpg) no-repeat;
     .overlay {
         opacity: .75;
@@ -348,25 +479,33 @@
 }
 .contact_us  {
     padding: 3% 5%; 
-    height: 243px;
+    height: 300px;
     background: #69be28;
     figure.move {
         -webkit-transform: translate(0,10px);
         transform: translate(0,10px);
     }
     h1 {
-        font-size: 2.5em;
+        font-size: 5rem;
         margin: 10px 0; 
     }
     .link {
         right: 10%; 
     }
+    .subtitle {
+        font-size: 2.5rem; 
+    }
 }
 /* WHY SIMPLOT */
 .carousel {
-    
+    .item,
+    .active,
+    .carousel-inner {
+        height: 100%;
+    }
+     
     .item {
-        padding: 15px 15%; 
+        padding: 100px 15%; 
         background: rgba(152, 143, 134, .5); 
         img {
             margin: 0 auto; 
@@ -410,6 +549,9 @@
     }
 }
 .numbers {
+    border-left: 2px solid #C3C8C8;
+    text-align: center; 
+    min-height: 250px; 
     span.number {
         display: block;
         margin: 0 auto; 
@@ -423,13 +565,30 @@
         display: block;
         font-size: 1.5em; 
     }
-    text-align: center; 
+    &:nth-of-type(1) {
+        border:none; 
+    }
+    &.student {
+        span.number {
+            font-size: 100px; 
+        }
+        
+    }
 }
 .reward {
-    padding: 10px auto; 
+    &:nth-of-type(1), &:nth-of-type(3) {
+        border-right: 2px solid #C3C8C8;
+    }
+    &:nth-of-type(3), &:nth-of-type(4) {
+        border-top: 2px solid #C3C8C8;
+    }
+    padding: 15px 5%; 
     img {
         max-width: 25%;
-        padding-right: 7%; 
+    }
+    ul {
+        margin-top: 20px; 
+        margin-left: 25%; 
     }
 }
 .giving_back {
@@ -582,45 +741,107 @@ figure.effect-sadie {
         z-index: 1000; 
     }
 }
-.tabs_custom {
-    .nav{
-        li:nth-of-type(1).active a {
-            background: #ebb700;
-        }
-        li:nth-of-type(2).active a {
-            background: #00b0ca;
-        }
-        li:nth-of-type(3).active a {
-            background: #bd4f19;
-        }
-        li:nth-of-type(4).active a {
-            background: #69be28;
-        }
-        li {
-            width: 25%; 
-            text-align: center;
-            a {
-                text-decoration: none; 
-                font-weight: 900; 
+.biz-group {
+    padding-top: 30px;
+    padding-bottom: 30px; 
+    .col-md-6:first-child {
+        
+    }
+    
+    &:nth-of-type(1) {
+        margin-top: 0; 
+        padding-top: 0; 
+    }
+    h4 {
+        margin-top:0; 
+    }
+    .link {
+        right: 15px; 
+        bottom: -25px; 
+        a {
+            font-size: 1.5rem; 
+            color: #675C53;
+            &:before {
+                background: #675C53;
             }
         }
     }
-    .tab-pane {
-        padding: 15px; 
-        
-        &#ab {
-            background: #ebb700;
-        }
-        &#fg {
-            background: #00b0ca;
-        }
-        &#ll {
-            background: #bd4f19;
-        }
-        &#corp {
-            background: #69be28;
+}
+.img-container {
+    padding-bottom: 10px; 
+}
+.wwd {
+    padding: 50px 0;
+    color: #fff; 
+    h1{
+        margin: 0; 
+        font-size: 3em;
+    }
+    &.orange {
+        background: #b14b03 url(../img/doublefade_leaf-pattern-orange.png) no-repeat 100%;
+    }
+}
+.sub-page {
+    margin-top: 75px; 
+    h2 {
+        font-size: 2em;
+        font-weight: 700; 
+        margin-bottom: 50px;
+    }
+}
+section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    &.bg-gray {
+        background: #e8ebec;
+    }
+}
+
+footer {
+    margin-top: 20px; 
+    font-size: .75em; 
+    text-align: center; 
+    .navbar-default {
+        background: none;
+        border: none; 
+        .navbar-nav {
+            float: none; 
+            transform: translateX(20%);
+            li {
+                a {
+                    text-decoration: none; 
+                }
+            }
         }
     }
+}
+
+
+/* You can change the height of the carousel by changing the height in the class below. It is set to 50% by default, but can be any height! */
+
+.carousel {
+    height: 50%;
+}
+
+#total-rewards {
+    img {
+        max-height: 150px;
+        display: block;
+        margin: 10px auto; 
+    }
+    .col-md-3 {
+        text-align: center;
+        ul {
+            padding: 0; 
+            li {
+                list-style: none; 
+            }
+        }
+    }
+}
+
+footer {
+    margin: 50px 0;
 }
 
 

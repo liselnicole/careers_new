@@ -25,23 +25,30 @@ $(function() {
                 triggerNumbers();
                 numbersDone = true;
             }
-        } 
+        }
+        
+        function checkNav() {
+            if ($(document).scrollTop() > 50) {
+                $('#main-nav-sub').addClass('shrink');
+              } else {
+                $('#main-nav-sub').removeClass('shrink');
+              }
+        }
         canSeeNumbers(); 
+        checkNav();
+        
 
         $(window).bind("scroll", function(event) {
-            //console.log('scroll');
+            checkNav();
             canSeeNumbers(); 
         });
-
+        var percent_number_step = $.animateNumber.numberStepFactories.append(' %');
         function triggerNumbers() {
             $('#holidays').animateNumber(
                {
                 number: 10
               },
-                2000,
-              function() {
-                  console.log('done');
-              }
+                2000
             ).delay(1000);
             $('#years').animateNumber(
                {
@@ -52,6 +59,28 @@ $(function() {
             $('#weeks').animateNumber(
                {
                 number: 4
+              },
+              2000
+            ).delay(3000);
+            
+            $('#value').animateNumber(
+               {
+                number: 97,
+                numberStep: percent_number_step
+              },
+                2000
+            ).delay(1000);
+            $('#fulltime').animateNumber(
+               {
+                number: 92,
+                numberStep: percent_number_step
+              },
+              2000
+            ).delay(2000);
+            $('#employed').animateNumber(
+               {
+                number: 40,
+                numberStep: percent_number_step
               },
               2000
             ).delay(3000);
