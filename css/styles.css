@@ -1,6 +1,7 @@
 html,
 body {
   height: 100%;
+  font-size: 16px;
 }
 .home.theWrapper {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e5e5e5+0,ffffff+100 */
@@ -16,7 +17,7 @@ body {
   /* IE6-9 */
 }
 .link a {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #fff;
   transition: all 0.2s ease-in-out;
   text-decoration: none;
@@ -93,7 +94,7 @@ body {
 }
 #main-nav .navbar-nav li a {
   color: #675C53;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 600;
   padding: 0;
   margin: 15px 15px 0 15px;
@@ -175,7 +176,7 @@ body {
 .col-md-7 .subtitle,
 .col-md-5 .subtitle,
 .col-md-4 .subtitle {
-  font-size: 1.5em;
+  font-size: 1.75em;
   display: block;
 }
 #careers_mosiac h1,
@@ -220,15 +221,16 @@ body {
   width: 51px;
 }
 .quote {
-  background: url(../img/quotes.png) no-repeat 20% 60%;
-  font-size: 2rem;
+  background: url(../img/quotes.png) no-repeat 20% 40%;
+  font-size: 1.75rem;
   overflow: visible;
 }
 .quote span {
-  font-size: 1.75rem;
+  font-size: 1.2rem;
   margin-top: 10px;
   display: block;
   float: right;
+  font-weight: 100;
 }
 .animated.duration-quarter {
   -webkit-animation-duration: .25s;
@@ -373,7 +375,6 @@ body {
 .what_we_do .overlay figure h1 {
   -webkit-transition: all 0.35s ease-in-out;
   transition: all 0.35s ease-in-out;
-  font-size: 6rem;
   margin: 10px 0;
 }
 .what_we_do .overlay figure h1:nth-of-type(1) {
@@ -390,9 +391,6 @@ body {
   -webkit-transition-delay: .3s;
   /* Safari */
   transition-delay: .3s;
-}
-.what_we_do .overlay figure .subtitle {
-  font-size: 2.5rem;
 }
 .what_we_do .link {
   right: 10%;
@@ -413,8 +411,8 @@ body {
   right: 38%;
 }
 .why_simplot .quote {
-  font-size: 2.5rem;
-  padding: 10% 0 0 23%;
+  font-weight: 600;
+  padding: 8% 0 0 25%;
 }
 .why_simplot .quote em {
   display: block;
@@ -428,12 +426,10 @@ body {
   transform: translate(10px, 0);
 }
 .apply_now h1 {
-  font-size: 6rem;
   margin: 10% 0 10px;
 }
 .apply_now .subtitle {
-  font-size: 2.5rem;
-  max-width: 300px;
+  max-width: 350px;
 }
 .apply_now .link {
   right: 50px;
@@ -449,11 +445,7 @@ body {
   transform: translate(0, 10px);
 }
 .student_center h1 {
-  font-size: 6rem;
   margin: 10px 0;
-}
-.student_center .subtitle {
-  font-size: 2.5rem;
 }
 .student_center .link {
   right: 10%;
@@ -466,14 +458,14 @@ body {
 .video .overlay {
   opacity: .75;
   background: #675C53;
-  background-color: rgba(103, 92, 83, 0.5);
+  background-color: rgba(103, 92, 83, 0.7);
 }
 .video .overlay i.fa {
   height: 125px;
   width: 125px;
   text-align: center;
   position: relative;
-  top: 20%;
+  top: 25%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -497,48 +489,65 @@ body {
   transform: translate(0, 10px);
 }
 .contact_us h1 {
-  font-size: 5rem;
+  font-size: 3rem;
   margin: 10px 0;
 }
 .contact_us .link {
   right: 10%;
 }
-.contact_us .subtitle {
-  font-size: 2.5rem;
-}
 /* WHY SIMPLOT */
+.carousel {
+  background: #675c53;
+  height: 500px;
+}
+.carousel .fill {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
 .carousel .item,
 .carousel .active,
 .carousel .carousel-inner {
   height: 100%;
-}
-.carousel .item {
-  padding: 100px 15%;
-  background: rgba(152, 143, 134, 0.5);
-}
-.carousel .item img {
+  max-width: 1800px;
   margin: 0 auto;
-  border: 2px solid #fff;
 }
 .carousel .item h3 {
   color: #fff;
   margin-top: 20px;
-  font-size: 1.5em;
+  font-size: 1.5rem;
   padding-left: 71px;
 }
 .carousel .item p {
   margin-top: 15px;
-  margin-left: 5%;
-  color: #675C53;
+  margin-left: 15%;
+  color: #fff;
+  font-size: 1.2rem;
 }
 .carousel .item p .intro {
-  font-size: 1.2em;
+  font-size: 1.5rem;
   font-weight: 900;
 }
 .carousel .item .quote {
+  margin-top: 15%;
   background-position: 0 0;
   margin-left: 5%;
   font-style: italic;
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+.carousel .item .link {
+  right: 0;
+  bottom: -50px;
+}
+.carousel .item .link a {
+  font-size: 1.2rem;
+  font-weight: 600;
 }
 .carousel .carousel-indicators {
   bottom: 0;
@@ -552,6 +561,7 @@ body {
   font-weight: 100;
 }
 .numbers {
+  padding: 0 50px;
   border-left: 2px solid #C3C8C8;
   text-align: center;
   min-height: 250px;
@@ -561,7 +571,7 @@ body {
   margin: 0 auto;
   font-weight: 900;
   margin-top: -50px;
-  font-size: 150px;
+  font-size: 200px;
   color: #EBB700;
 }
 .numbers label {
@@ -623,7 +633,7 @@ body {
   float: left;
   overflow: hidden;
   margin: 0 1%;
-  min-height: 334px;
+  min-height: 500px;
   width: 100%;
   background: #BD4F19;
   text-align: center;
@@ -773,6 +783,9 @@ figure.effect-sadie:hover p {
 .wwd.orange {
   background: #b14b03 url(../img/doublefade_leaf-pattern-orange.png) no-repeat 100%;
 }
+.wwd.blue {
+  background: #04a5bd url(../img/doublefade_leaf-pattern-blue.png) no-repeat 100%;
+}
 .sub-page {
   margin-top: 75px;
 }
@@ -805,9 +818,6 @@ footer .navbar-default .navbar-nav li a {
   text-decoration: none;
 }
 /* You can change the height of the carousel by changing the height in the class below. It is set to 50% by default, but can be any height! */
-.carousel {
-  height: 50%;
-}
 #total-rewards img {
   max-height: 150px;
   display: block;
