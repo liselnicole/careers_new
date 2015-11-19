@@ -72,7 +72,6 @@ body {
         }
     }
 #main-nav {
-    
     background: transparent; 
     border: none;
     margin-bottom: 20px; 
@@ -89,6 +88,45 @@ body {
         position: absolute;
         right: 0; 
         bottom: 0; 
+    }
+
+}
+#main-nav-sub {
+    margin-bottom: 0; 
+    height: 75px; 
+    transition: all 0.35s ease-in-out;
+    .navbar-brand {
+            padding:0;
+            img {
+                margin-top: 5px; 
+                margin-left: 15px; 
+                height: 65px;
+                transition: all 0.35s ease-in-out;
+            }
+    }
+    ul {
+        margin-top: 25px; 
+        transition: all 0.35s ease-in-out;
+    }
+    
+    li {
+        a {
+            background: none; 
+            text-decoration: none; 
+        }
+    }
+    &.shrink {
+        height: 50px; 
+            img {
+                margin-top: 2px; 
+                height: 45px; 
+            }
+        ul {
+            margin-top: 0; 
+        }
+    }
+}
+#main-nav .navbar-nav, #main-nav-sub .navbar-nav {
         li {
             a {
                 color: #675C53;
@@ -120,41 +158,6 @@ body {
             
         }
     }
-}
-#main-nav-sub {
-    margin-bottom: 0; 
-    height: 75px; 
-    transition: all 0.35s ease-in-out;
-    .navbar-brand {
-            padding:0;
-            img {
-                margin-top: 5px; 
-                margin-left: 15px; 
-                height: 65px;
-                transition: all 0.35s ease-in-out;
-            }
-    }
-    ul {
-        margin-top: 25px; 
-        transition: all 0.35s ease-in-out;
-    }
-    
-    li {
-        a {
-            text-decoration: none; 
-        }
-    }
-    &.shrink {
-        height: 50px; 
-            img {
-                margin-top: 2px; 
-                height: 45px; 
-            }
-        ul {
-            margin-top: 0; 
-        }
-    }
-}
 
 #careers_mosaic {
     margin-left: 5%;
@@ -500,7 +503,6 @@ body {
         -o-background-size: cover;
     }
     .item,
-    .active,
     .carousel-inner {
         height: 100%;
         max-width: 1800px;
@@ -541,6 +543,19 @@ body {
                 font-weight: 600; 
             }
         }
+        figcaption {
+            margin-top: 20%;
+            h2 {
+                font-size: 5rem;
+                text-transform: uppercase; 
+                color: #fff; 
+                margin-bottom:0; 
+            }
+            p {
+                margin-left:0;
+                font-size: 2rem; 
+            }
+        }
     }
     .carousel-indicators {
         bottom: 0; 
@@ -562,7 +577,7 @@ body {
     padding: 0 50px; 
     border-left: 2px solid #C3C8C8;
     text-align: center; 
-    min-height: 250px; 
+    min-height: 325px; 
     span.number {
         display: block;
         margin: 0 auto; 
@@ -581,7 +596,11 @@ body {
     }
     &.student {
         span.number {
-            font-size: 100px; 
+            font-size: 175px; 
+            &:after {
+                font-size: 50px;
+                content: "%"
+            }
         }
         
     }
@@ -620,10 +639,19 @@ body {
 }
 .grid {
     color: #fff; 
-    margin-left: -15px;
-    width: 103.5%; 
+    //margin-left: -15px;
+    //width: 103.5%; 
     .col-md-6, .col-sm-6 {
-        padding: 0; 
+        //padding: 0; 
+        margin-bottom: 30px;
+    }
+    &.culture {
+        figure {
+            min-height: 500px;
+            h2 {
+                font-size: 2.5rem;
+            }
+        }
     }
     figure {
         position: relative;
@@ -632,7 +660,7 @@ body {
         margin: 0 1%;
         //min-width: 320px;
         //max-width: 480px;
-        min-height: 500px;
+        min-height: 300px;
         width: 100%;
         background: #BD4F19;
         text-align: center;
@@ -725,9 +753,8 @@ figure.effect-sadie {
 .good_fit {
     figure {
         text-align: left; 
-        padding: 15%; 
-        -webkit-transform: translate(0,20%);
-        transform: translate(0,20%);
+        padding:  35% 15% 15% 15%; 
+        
         .link a {
             width: auto;
             height: auto;
@@ -740,7 +767,6 @@ figure.effect-sadie {
             font-size: 3em; 
         }
     }
-    background: #BD4F19;
     .subtitle {
         font-size: 1.5em;
         display: block; 
@@ -768,9 +794,9 @@ figure.effect-sadie {
     }
     .link {
         right: 15px; 
-        bottom: -25px; 
+        bottom: -30px; 
         a {
-            font-size: 1.5rem; 
+            font-size: 1rem; 
             color: #675C53;
             &:before {
                 background: #675C53;
@@ -793,6 +819,9 @@ figure.effect-sadie {
     }
     &.blue {
         background: #04a5bd url(../img/doublefade_leaf-pattern-blue.png) no-repeat 100%;
+    }
+    &.yellow {
+        background: #E2AF30 url(../img/doublefade_leaf-pattern-yellow.png) no-repeat 100%;
     }
 }
 
@@ -821,7 +850,7 @@ footer {
         border: none; 
         .navbar-nav {
             float: none; 
-            transform: translateX(20%);
+            transform: translateX(15%);
             li {
                 a {
                     text-decoration: none; 
@@ -851,6 +880,47 @@ footer {
             }
         }
     }
+}
+.media {
+    .media-left {
+        img {
+            max-width: 100px; 
+        }
+    }
+    .media-body {
+        p {
+            margin-top: 10px; 
+        }
+    }
+}
+.video {
+    &.intern {
+        width: 50%; 
+        background: url(../img/intern_video.jpg) no-repeat;
+        height: 350px; 
+        .overlay {
+            i.fa {
+                position: absolute;
+                top: 28%;
+            }
+        }
+        h3 {
+            top: 70%; 
+            color: #fff; 
+            text-align: center; 
+            position: absolute;
+            left: 30%; 
+        }
+    }
+}
+.list-group {
+    font-size: 1.5rem; 
+    .fa-star {
+        color: #EBB700;
+    }
+}
+.fa-check-square-o {
+    color: #69BE28;
 }
 
 footer {
